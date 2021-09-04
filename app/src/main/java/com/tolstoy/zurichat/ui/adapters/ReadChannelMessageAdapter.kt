@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.tolstoy.zurichat.R
 import com.tolstoy.zurichat.ui.fragment.Channel
 import com.tolstoy.zurichat.databinding.ChannelsAdapterBinding
@@ -21,6 +22,7 @@ class ReadChannelMessageAdapter(val context: Activity, private val list: List<Ch
         }
         fun bind(channel: Channel) {
             view.findViewById<TextView>(R.id.channelTitle).text = channel.name
+            view.findViewById<FloatingActionButton>(R.id.fab).setImageResource(R.drawable.outline_numbers_20)
         }
     }
 
